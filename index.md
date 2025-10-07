@@ -1,5 +1,5 @@
 ---
-Bromodachi Team
+# Bromodachi Team
 ---
 
 # Welcome to Bromodachi Team!
