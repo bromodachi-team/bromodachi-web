@@ -1,7 +1,3 @@
----
-# Bromodachi Team
----
-
 # Welcome to Bromodachi Team!
 
 We are a small indie team passionate about **creating games that are fun and memorable**.  
