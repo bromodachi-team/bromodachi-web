@@ -80,6 +80,11 @@ header {
   color: #fff;
   text-align: center;
 }
+.card-content h4 {
+  margin: 0 0 0.2rem;
+  color: #fff;
+  text-align: center;
+}
 .card-content p {
   margin: 0 0 1rem;
   color: #ccc;

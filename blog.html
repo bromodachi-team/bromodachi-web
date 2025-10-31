@@ -57,9 +57,8 @@
         card.innerHTML = `
           <div class="card-content">
             <h3>${post.title}</h3>
+            <h4>${post.short_desc || ""}</h4>       
             <p>${post.date ? post.date : ""}</p>
-            <h2>${post.short_desc || ""}</h2>
-            <h4>${post.short_desc || ""}</h4>            
             <a href="blog.html?post=${post.file}" class="btn">Read More</a>
           </div>
         `;
