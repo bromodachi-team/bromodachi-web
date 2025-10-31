@@ -6,6 +6,29 @@
   <title>Bromodachi Team's Blogs</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* === BLOG VIEW (Full Post) === */
+    .blog-view {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .blog-view h1 { margin-top: 0; color: #111; }
+    .blog-view p, .blog-view li { line-height: 1.6; color: #333; }
+    .blog-view hr { margin: 1.5rem 0; border: none; height: 1px; background: #ddd; }
+
+    /* === FADE TRANSITION === */
+    #blog-container {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+    #blog-container.show {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -24,66 +47,88 @@
 
   <script>
     const container = document.getElementById("blog-container");
+    let blogListCache = [];
 
-    // ✅ Fetch danh sách bài viết từ JSON
+    // Hiệu ứng mờ dần
+    function fadeIn() {
+      requestAnimationFrame(() => container.classList.add("show"));
+    }
+    function fadeOut(callback) {
+      container.classList.remove("show");
+      setTimeout(callback, 400);
+    }
+
+    // ✅ Load danh sách bài viết
     async function loadBlogList() {
       try {
         const res = await fetch("blog_list.json");
         if (!res.ok) throw new Error("Cannot load blog_list.json");
         const blogList = await res.json();
+        blogListCache = blogList;
 
         const params = new URLSearchParams(window.location.search);
         const post = params.get("post");
 
-        if (post) {
-          // Nếu có ?post=filename → hiển thị bài cụ thể
-          showPost(post);
-        } else {
-          // Hiển thị danh sách blog card
-          renderBlogList(blogList);
-        }
+        if (post) showPost(post);
+        else renderBlogList(blogList);
       } catch (err) {
         console.error("Error loading blog list:", err);
         container.innerHTML = `<p>⚠️ Failed to load blog list.</p>`;
+        fadeIn();
       }
     }
 
-    // ✅ Hiển thị danh sách card blog
+    // ✅ Danh sách blog card
     function renderBlogList(blogList) {
-      container.innerHTML = "";
-      blogList.forEach(post => {
-        const card = document.createElement("div");
-        card.className = "card blog-card";
-        card.innerHTML = `
-          <div class="card-content">
-            <h3>${post.title}</h3>
-            <h4>${post.short_desc || ""}</h4>       
-            <p>${post.date ? post.date : ""}</p>
-            <a href="blog.html?post=${post.file}" class="btn">Read More</a>
-          </div>
-        `;
-        container.appendChild(card);
+      fadeOut(() => {
+        container.className = "card-grid";
+        container.innerHTML = "";
+        blogList.forEach(post => {
+          const card = document.createElement("div");
+          card.className = "card blog-card";
+          card.innerHTML = `
+            <div class="card-content">
+              <h3>${post.title}</h3>
+              <h4>${post.short_desc || ""}</h4>
+              ${post.date ? `<p><small>${post.date}</small></p>` : ""}             
+              <a href="blog.html?post=${post.file}" class="btn">Read More</a>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        fadeIn();
       });
     }
 
     // ✅ Hiển thị chi tiết bài viết (markdown)
     async function showPost(file) {
-      try {
-        const res = await fetch(`blogs/${file}`);
-        if (!res.ok) throw new Error("Cannot load markdown: " + file);
-        const text = await res.text();
-        const html = marked.parse(text);
+      fadeOut(async () => {
+        try {
+          const meta = blogListCache.find(b => b.file === file);
 
-        container.innerHTML = `
-          <article class="blog-post">
-            <a href="blog.html" class="btn back-btn">← Back</a>
-            ${html}
-          </article>
-        `;
-      } catch (err) {
-        console.error("Error loading post:", err);
-        container.innerHTML = `<p>⚠️ Failed to load blog post.</p>`;
-      }
+          const res = await fetch(`blogs/${file}`);
+          if (!res.ok) throw new Error("Cannot load markdown: " + file);
+          const text = await res.text();
+          const html = marked.parse(text);
+
+          container.className = "";
+          container.innerHTML = `
+            <article class="blog-view">
+              <a href="blog.html" class="btn back-btn">← Back</a>
+              <h1>${meta?.title || file}</h1>
+              ${meta?.date ? `<p><em>${meta.date}</em></p>` : ""}
+              ${meta?.desc ? `<p>${meta.desc}</p>` : ""}
+              <hr/>
+              ${html}
+            </article>
+          `;
+          fadeIn();
+        } catch (err) {
+          console.error("Error loading post:", err);
+          container.innerHTML = `<p>⚠️ Failed to load blog post.</p>`;
+          fadeIn();
+        }
+      });
     }
 
     loadBlogList();
