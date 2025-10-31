@@ -13,7 +13,7 @@ To setup the chained explosion, you need to place the bombs onto the board by dr
 Here are the visual representation of bombs in the game:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Bombs.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Bombs.png?raw=true)
 
 
 From left to right: Cross bomb, Diagonal Bomb, Push Bomb
@@ -21,7 +21,7 @@ From left to right: Cross bomb, Diagonal Bomb, Push Bomb
 
 And here are the enemies within the game:
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Enemies.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Enemies.png?raw=true)
 
 
 From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)
@@ -30,7 +30,7 @@ From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies wit
 Also, some of the other special elements:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Special%20Elements.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Special%20Elements.png?raw=true)
 
 
 From left to right: Civilian, Explosive Keg, and Stack Explosive Keg
