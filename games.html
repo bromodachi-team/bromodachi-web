@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bromodachi Team's Games</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <nav>
     <a href="index.html">Home</a>
@@ -46,12 +48,12 @@
             links.push(`<a href="${game.links.itch}" target="_blank">Itch.io</a>`);
 
           card.innerHTML = `
-            <img src="${game.feature_image || "assets/default_feature.png"}" alt="${game.title}" class="game-feature" />
+            <img src="${game.feature_image}" alt="${game.title}" class="game-feature" />
             <div class="card-content">
               <h3>${game.title}</h3>
               <p>${game.short_desc}</p>
-              <div class="store-links">${links.join(" | ")}</div>
-            </div>
+              <div class="store-links">${links.join(" ")}</div>
+            </div
           `;
           container.appendChild(card);
         });
@@ -64,7 +66,21 @@
       }
     }
 
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".game-feature").forEach(img => {
+        if (img.complete) resizeImage(img);
+        else img.onload = () => resizeImage(img);
+      });
+    });
+
+    function resizeImage(img) {
+      const ratio = img.naturalHeight / img.naturalWidth;
+      const targetWidth = img.clientWidth;
+      img.style.height = `${targetWidth * ratio}px`;
+    }
+
     loadGames();
   </script>
 </body>
+
 </html>

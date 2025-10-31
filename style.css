@@ -160,3 +160,92 @@ header {
 .store-btn:hover {
   background: #0056b3;
 }
+
+/* === GRID LAYOUT FOR GAME CARDS === */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* === GAME CARD STYLE === */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  max-width: 320px;
+  margin: 0 auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* === FEATURE IMAGE === */
+.game-feature {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* === CARD CONTENT === */
+.game-card .card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
+}
+
+.game-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.game-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.store-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  background: rgba(0, 188, 212, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background 0.2s ease;
+}
+
+.store-links a:hover {
+  background: rgba(0, 188, 212, 0.3);
+}
+
+/* === FEATURE IMAGE === */
+.game-feature {
+  width: 100%;
+  height: 180px; /* bạn có thể chỉnh cao/thấp tùy bố cục */
+  object-fit: contain; /* 🔥 giữ nguyên tỉ lệ, không crop */
+  object-position: center;
+  background-color: #111; /* nền đệm để ảnh có viền khi không full */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
