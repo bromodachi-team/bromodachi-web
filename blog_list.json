@@ -2,6 +2,7 @@
   {
     "title": "Test",
     "file": "test.md",
+    "short_desc": "Test description",
     "date": "2025-11-01"
   }
 ]
