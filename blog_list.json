@@ -4,5 +4,11 @@
     "file": "test.md",
     "short_desc": "Test description",
     "date": "2025-11-01"
+  },
+  {
+     "title": "Requiem for the Bombs",
+      "file": "bombermania-post-mortem.md",
+    "short_desc": "A post mortem of Bombermania"
+    "date": "2025-10-31"
   }
 ]
