@@ -2,7 +2,7 @@ Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - t
 
 ## About the game
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Gameplay.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Gameplay.png?raw=true)
 
 Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.
 
