@@ -92,6 +92,10 @@
         const res = await fetch(`blogs/${file}`);
         if (!res.ok) throw new Error("Cannot load markdown: " + file);
         const text = await res.text();
+        text = text.replace(
+        /!\[(.*?)\]\((https:\/\/github\.com\/[^)\s]+)(?!\?raw=true)([^)]*)\)/g,
+        (match, alt, url, rest) => `![${alt}](${url}${rest}?raw=true)`
+      );
         const html = marked.parse(text);
 
         // Gỡ class grid để full màn hình
