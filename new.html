@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Indie Game Team</title>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0e0e0e;
+        color: #f2f2f2;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+      }
+      nav a {
+        color: #f2f2f2;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav a:hover {
+        color: #00b3ff;
+      }
+      main {
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+      h1, h2 {
+        color: #00b3ff;
+      }
+      .game-card {
+        background: #1c1c1c;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #111;
+        color: #888;
+        margin-top: 3rem;
+      }
+      .nav-link.active {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><strong>Our Game Team</strong></div>
+      <nav>
+        <a href="#main" class="nav-link">Main Page</a>
+        <a href="#games" class="nav-link">Game List</a>
+        <a href="#blogs" class="nav-link">Blogs</a>
+        <a href="#info" class="nav-link">Info</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="main">
+        <h1>Welcome to Our Indie Game Studio</h1>
+        <p>
+          We are a small, creative team passionate about crafting unique gameplay
+          experiences. This is where we share our projects, development logs, and
+          post-mortems.
+        </p>
+      </section>
+
+      <section id="games">
+        <h2>Game List</h2>
+        <div class="game-card">
+          <h3>Bombermania</h3>
+          <p>Our first puzzle-action prototype built to test gameplay retention and art direction.</p>
+          <p><strong>Status:</strong> Prototype Completed</p>
+          <a href="#">→ Read Post-mortem</a>
+        </div>
+        <div class="game-card">
+          <h3>Next Midcore Project</h3>
+          <p>A midcore title focused on depth and IAP systems, currently in early design.</p>
+          <p><strong>Status:</strong> In Development</p>
+        </div>
+      </section>
+
+      <section id="blogs">
+        <h2>Blogs & Devlogs</h2>
+        <div class="game-card">
+          <h3>Building Our First Game: Lessons from Bombermania</h3>
+          <p>A retrospective look at what we learned from our first 6-week prototype.</p>
+          <a href="#">→ Read More</a>
+        </div>
+        <div class="game-card">
+          <h3>Designing for Retention: What We’ll Change Next Time</h3>
+          <p>Key insights on user onboarding, gameplay depth, and meta systems for midcore design.</p>
+          <a href="#">→ Read More</a>
+        </div>
+      </section>
+
+      <section id="info">
+        <h2>Team Info</h2>
+        <p><strong>Members:</strong> 4 (Game Designer, Artist, Developer, QA)</p>
+        <p><strong>Focus:</strong> Rapid prototyping & player behavior validation</p>
+        <p><strong>Contact:</strong> teamname@example.com</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Our Indie Game Team — Built with ❤️ using GitHub Pages</p>
+    </footer>
+  </body>
+</html>
