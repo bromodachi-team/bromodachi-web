@@ -16,70 +16,77 @@
   </nav>
 
   <header>
-    <h1>Team Blog</h1>
+    <h1>Bromodachi Team Blogs</h1>
     <p>Development notes, postmortems, and updates</p>
   </header>
 
   <main id="blog-container" class="card-grid"></main>
 
   <script>
-    // Danh sách file .md cần hiển thị
-    const blogFiles = [
-      "bombermania-postmortem.md",
-      "devlog1.md"
-      // => Thêm bài viết mới ở đây, ví dụ: "game2-prototype.md"
-    ];
-
     const container = document.getElementById("blog-container");
 
-    // Fetch từng bài và render card
-    async function loadBlogs() {
-      for (const file of blogFiles) {
-        try {
-          const res = await fetch(`blogs/${file}`);
-          const text = await res.text();
+    // ✅ Fetch danh sách bài viết từ JSON
+    async function loadBlogList() {
+      try {
+        const res = await fetch("blog_list.json");
+        if (!res.ok) throw new Error("Cannot load blog_list.json");
+        const blogList = await res.json();
 
-          // Lấy title (dòng đầu tiên # Heading) và excerpt (100 ký tự đầu)
-          const lines = text.split("\n");
-          const titleLine = lines.find(l => l.startsWith("#")) || file;
-          const title = titleLine.replace(/^#\s*/, "");
-          const excerpt = text.replace(/^#.*\n/, "").substring(0, 140) + "...";
+        const params = new URLSearchParams(window.location.search);
+        const post = params.get("post");
 
-          const card = document.createElement("div");
-          card.className = "card blog-card";
-          card.innerHTML = `
-            <div class="card-content">
-              <h3>${title}</h3>
-              <p>${excerpt}</p>
-              <a href="?post=${file}" class="btn">Read More</a>
-            </div>
-          `;
-          container.appendChild(card);
-        } catch (err) {
-          console.error("Error loading", file, err);
+        if (post) {
+          // Nếu có ?post=filename → hiển thị bài cụ thể
+          showPost(post);
+        } else {
+          // Hiển thị danh sách blog card
+          renderBlogList(blogList);
         }
+      } catch (err) {
+        console.error("Error loading blog list:", err);
+        container.innerHTML = `<p>⚠️ Failed to load blog list.</p>`;
       }
-
-      // Nếu có query ?post=filename.md → hiển thị nội dung chi tiết
-      const params = new URLSearchParams(window.location.search);
-      const post = params.get("post");
-      if (post) showPost(post);
     }
 
+    // ✅ Hiển thị danh sách card blog
+    function renderBlogList(blogList) {
+      container.innerHTML = "";
+      blogList.forEach(post => {
+        const card = document.createElement("div");
+        card.className = "card blog-card";
+        card.innerHTML = `
+          <div class="card-content">
+            <h3>${post.title}</h3>
+            <p>${post.date ? post.date : ""}</p>
+            <p>${post.short_desc || ""}</p>
+            <a href="blog.html?post=${post.file}" class="btn">Read More</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // ✅ Hiển thị chi tiết bài viết (markdown)
     async function showPost(file) {
-      const res = await fetch(`blogs/${file}`);
-      const text = await res.text();
-      const html = marked.parse(text);
+      try {
+        const res = await fetch(`blogs/${file}`);
+        if (!res.ok) throw new Error("Cannot load markdown: " + file);
+        const text = await res.text();
+        const html = marked.parse(text);
 
-      container.innerHTML = `
-        <article class="blog-post">
-          <a href="blog.html" class="btn back-btn">← Back</a>
-          ${html}
-        </article>
-      `;
+        container.innerHTML = `
+          <article class="blog-post">
+            <a href="blog.html" class="btn back-btn">← Back</a>
+            ${html}
+          </article>
+        `;
+      } catch (err) {
+        console.error("Error loading post:", err);
+        container.innerHTML = `<p>⚠️ Failed to load blog post.</p>`;
+      }
     }
 
-    loadBlogs();
+    loadBlogList();
   </script>
 </body>
 </html>
