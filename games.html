@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game List</title>
+  <title>Games</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,55 +15,52 @@
   </nav>
 
   <header>
-    <h1>Our Games</h1>
-    <p>Explore all the games created by our team.</p>
+    <h1>Game List</h1>
+    <p>Explore our released and prototype games</p>
   </header>
 
-  <main id="games-container" class="card-grid"></main>
+  <main id="game-container" class="card-grid"></main>
 
   <script>
     async function loadGames() {
-      try {
-        const res = await fetch("game_list.json");
-        const games = await res.json();
-        const container = document.getElementById("games-container");
+      const container = document.getElementById("game-container");
 
-        const platformIcons = {
-          google_play: "📱",
-          app_store: "🍎",
-          steam: "🎮",
-          itch: "🕹️",
-          epic: "⚡"
-        };
+      try {
+        const res = await fetch(`game_list.json?ts=${Date.now()}`);
+        if (!res.ok) throw new Error("Cannot fetch game_list.json");
+        const games = await res.json();
 
         games.forEach(game => {
           const card = document.createElement("div");
           card.className = "card game-card";
-          
-          // Build store links dynamically
-          let storeLinks = "";
-          for (const [key, value] of Object.entries(game.links)) {
-            if (value && platformIcons[key]) {
-              const label = key.replace("_", " ").replace(/\b\w/g, l => l.toUpperCase());
-              storeLinks += `<a href="${value}" target="_blank" class="btn store-btn">${platformIcons[key]} ${label}</a>`;
-            }
-          }
+          const links = [];
+
+          // ✅ link check tự động
+          if (game.links.app_store)
+            links.push(`<a href="${game.links.app_store}" target="_blank">iOS</a>`);
+          if (game.links.google_play)
+            links.push(`<a href="${game.links.google_play}" target="_blank">Android</a>`);
+          if (game.links.steam)
+            links.push(`<a href="${game.links.steam}" target="_blank">Steam</a>`);
+          if (game.links.itch)
+            links.push(`<a href="${game.links.itch}" target="_blank">Itch.io</a>`);
 
           card.innerHTML = `
-            <img src="${game.feature_image}" alt="${game.title} Feature" class="game-feature" />
+            <img src="${game.feature_image || "assets/default_feature.png"}" alt="${game.title}" class="game-feature" />
             <div class="card-content">
-              <div class="game-header">
-                <img src="${game.icon_image}" alt="${game.title} Icon" class="game-icon" />
-                <h3>${game.title}</h3>
-              </div>
+              <h3>${game.title}</h3>
               <p>${game.short_desc}</p>
-              <div class="store-links">${storeLinks}</div>
+              <div class="store-links">${links.join(" | ")}</div>
             </div>
           `;
           container.appendChild(card);
         });
+
       } catch (err) {
-        console.error("Failed to load game list:", err);
+        console.error(err);
+        document.getElementById("game-container").innerHTML = `
+          <p style="color:red;">⚠️ Failed to load game_list.json</p>
+        `;
       }
     }
 
