@@ -1,3 +1,4 @@
+/* === BASE === */
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
@@ -5,7 +6,7 @@ body {
   color: #222;
 }
 
-/* NAVIGATION */
+/* === NAVIGATION === */
 nav {
   display: flex;
   justify-content: center;
@@ -13,239 +14,116 @@ nav {
   background: #111;
   padding: 1rem;
 }
-
 nav a {
   color: #ccc;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
+nav a:hover { color: #fff; }
+nav a.active { color: #00bcd4; }
 
-nav a:hover {
-  color: #fff;
-}
-
-nav a.active {
-  color: #00bcd4;
-}
-
-/* HEADER */
+/* === HEADER === */
 header {
   text-align: center;
   padding: 3rem 1rem;
 }
 
-/* CARD GRID */
+/* === GRID LAYOUT (CARD / GAME) === */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
+  justify-content: center;
 }
 
-.card {
-  background: white;
+/* === GENERIC CARD === */
+.card, .game-card {
+  background: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.card:hover {
+.card:hover, .game-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-.card img {
+/* === IMAGE === */
+.card img, .game-feature {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain; /* Giữ tỉ lệ ảnh, không crop */
+  object-position: center;
+  background: #111;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* === CARD CONTENT === */
 .card-content {
   padding: 1rem;
 }
+.card-content h3 { margin: 0 0 0.5rem; color: #fff; }
+.card-content p { margin: 0 0 1rem; color: #ccc; }
 
-.card-content h3 {
-  margin-top: 0;
-}
-
-.btn {
+/* === BUTTONS === */
+.btn, .store-btn, .back-btn {
   display: inline-block;
-  background: #00bcd4;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  color: #fff;
   text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
   transition: background 0.3s;
 }
+.btn { background: #00bcd4; }
+.btn:hover { background: #0097a7; }
+.store-btn { background: #007bff; font-size: 0.9rem; padding: 0.4rem 0.8rem; }
+.store-btn:hover { background: #0056b3; }
+.back-btn { background: #555; margin-bottom: 1rem; }
 
-.btn:hover {
-  background: #0097a7;
+/* === STORE LINKS === */
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.store-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  background: rgba(0,188,212,0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+.store-links a:hover {
+  background: rgba(0,188,212,0.3);
 }
 
-/* BLOG LIST */
-.blog-list {
-  max-width: 700px;
-  margin: auto;
-  padding: 1rem 2rem;
-}
-
-.blog-list article {
+/* === BLOG SECTION === */
+.blog-list, .info-section, .blog-post {
   background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+}
+.blog-list article {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-
 .blog-list a {
   color: #00bcd4;
   text-decoration: none;
 }
-
 .blog-list a:hover {
   text-decoration: underline;
 }
-
-/* INFO SECTION */
-.info-section {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-
-.blog-card p {
-  color: #555;
-}
-
-.blog-post {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.blog-post h1, .blog-post h2, .blog-post h3 {
-  margin-top: 1rem;
-}
-
-.back-btn {
-  background: #555;
-  margin-bottom: 1rem;
-}
-
-.store-links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.store-btn {
-  background: #007bff;
-  color: white;
-  border-radius: 8px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.store-btn:hover {
-  background: #0056b3;
-}
-
-/* === GRID LAYOUT FOR GAME CARDS === */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 2rem;
-}
-
-/* === GAME CARD STYLE === */
-.game-card {
-  display: flex;
-  flex-direction: column;
-  background: #1e1e1e;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  max-width: 320px;
-  margin: 0 auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.game-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-}
-
-/* === FEATURE IMAGE === */
-.game-feature {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  object-position: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-/* === CARD CONTENT === */
-.game-card .card-content {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 220px;
-}
-
-.game-card h3 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 0 0.5rem;
-}
-
-.game-card p {
-  font-size: 0.9rem;
-  color: #ccc;
-  flex-grow: 1;
-  margin-bottom: 1rem;
-}
-
-.store-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.store-links a {
-  color: #00bcd4;
-  text-decoration: none;
-  background: rgba(0, 188, 212, 0.1);
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  transition: background 0.2s ease;
-}
-
-.store-links a:hover {
-  background: rgba(0, 188, 212, 0.3);
-}
-
-/* === FEATURE IMAGE === */
-.game-feature {
-  width: 100%;
-  height: 180px; /* bạn có thể chỉnh cao/thấp tùy bố cục */
-  object-fit: contain; /* 🔥 giữ nguyên tỉ lệ, không crop */
-  object-position: center;
-  background-color: #111; /* nền đệm để ảnh có viền khi không full */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
+.blog-card p, .blog-post p { color: #555; }
+.blog-post h1, .blog-post h2, .blog-post h3 { margin-top: 1rem; }
