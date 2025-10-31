@@ -32,41 +32,60 @@ header {
 /* === GRID LAYOUT (CARD / GAME) === */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* mỗi card ~300px */
+  max-width: 960px; /* giới hạn tổng chiều rộng ~3 card */
+  margin: 0 auto;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   justify-content: center;
 }
 
 /* === GENERIC CARD === */
 .card, .game-card {
-  background: #fff;
+  background: #1e1e1e;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
 }
 .card:hover, .game-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
 /* === IMAGE === */
 .card img, .game-feature {
   width: 100%;
-  height: 180px;
-  object-fit: contain; /* Giữ tỉ lệ ảnh, không crop */
+  height: 200px;               /* cố định chiều cao */
+  object-fit: contain;         /* giữ nguyên tỉ lệ, không crop */
   object-position: center;
-  background: #111;
+  background: #111;            /* nền đệm khi ảnh nhỏ */
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 /* === CARD CONTENT === */
 .card-content {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
 }
-.card-content h3 { margin: 0 0 0.5rem; color: #fff; }
-.card-content p { margin: 0 0 1rem; color: #ccc; }
+.card-content h3 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+.card-content p {
+  margin: 0 0 1rem;
+  color: #ccc;
+  text-align: center;
+  flex-grow: 1;
+}
 
 /* === BUTTONS === */
 .btn, .store-btn, .back-btn {
@@ -79,7 +98,11 @@ header {
 }
 .btn { background: #00bcd4; }
 .btn:hover { background: #0097a7; }
-.store-btn { background: #007bff; font-size: 0.9rem; padding: 0.4rem 0.8rem; }
+.store-btn {
+  background: #007bff;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
 .store-btn:hover { background: #0056b3; }
 .back-btn { background: #555; margin-bottom: 1rem; }
 
@@ -87,6 +110,7 @@ header {
 .store-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
 }
@@ -99,9 +123,7 @@ header {
   font-size: 0.8rem;
   transition: background 0.2s;
 }
-.store-links a:hover {
-  background: rgba(0,188,212,0.3);
-}
+.store-links a:hover { background: rgba(0,188,212,0.3); }
 
 /* === BLOG SECTION === */
 .blog-list, .info-section, .blog-post {
@@ -122,8 +144,20 @@ header {
   color: #00bcd4;
   text-decoration: none;
 }
-.blog-list a:hover {
-  text-decoration: underline;
-}
+.blog-list a:hover { text-decoration: underline; }
 .blog-card p, .blog-post p { color: #555; }
 .blog-post h1, .blog-post h2, .blog-post h3 { margin-top: 1rem; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .card-grid {
+    max-width: 640px; /* hiển thị 2 card */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .card-grid {
+    max-width: 340px; /* hiển thị 1 card */
+    grid-template-columns: 1fr;
+  }
+}
