@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="info.html">Info</a>
+  </nav>
+
+  <header>
+    <h1>Team Blog</h1>
+    <p>Development notes, postmortems, and updates</p>
+  </header>
+
+  <main id="blog-container" class="card-grid"></main>
+
+  <script>
+    // Danh sách file .md cần hiển thị
+    const blogFiles = [
+      "bombermania-postmortem.md",
+      "devlog1.md"
+      // => Thêm bài viết mới ở đây, ví dụ: "game2-prototype.md"
+    ];
+
+    const container = document.getElementById("blog-container");
+
+    // Fetch từng bài và render card
+    async function loadBlogs() {
+      for (const file of blogFiles) {
+        try {
+          const res = await fetch(`blogs/${file}`);
+          const text = await res.text();
+
+          // Lấy title (dòng đầu tiên # Heading) và excerpt (100 ký tự đầu)
+          const lines = text.split("\n");
+          const titleLine = lines.find(l => l.startsWith("#")) || file;
+          const title = titleLine.replace(/^#\s*/, "");
+          const excerpt = text.replace(/^#.*\n/, "").substring(0, 140) + "...";
+
+          const card = document.createElement("div");
+          card.className = "card blog-card";
+          card.innerHTML = `
+            <div class="card-content">
+              <h3>${title}</h3>
+              <p>${excerpt}</p>
+              <a href="?post=${file}" class="btn">Read More</a>
+            </div>
+          `;
+          container.appendChild(card);
+        } catch (err) {
+          console.error("Error loading", file, err);
+        }
+      }
+
+      // Nếu có query ?post=filename.md → hiển thị nội dung chi tiết
+      const params = new URLSearchParams(window.location.search);
+      const post = params.get("post");
+      if (post) showPost(post);
+    }
+
+    async function showPost(file) {
+      const res = await fetch(`blogs/${file}`);
+      const text = await res.text();
+      const html = marked.parse(text);
+
+      container.innerHTML = `
+        <article class="blog-post">
+          <a href="blog.html" class="btn back-btn">← Back</a>
+          ${html}
+        </article>
+      `;
+    }
+
+    loadBlogs();
+  </script>
+</body>
+</html>
