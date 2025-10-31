@@ -2,7 +2,7 @@ Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - t
 
 ## About the game
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Gameplay.png?raw=true)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Gameplay.png)
 
 Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.
 
@@ -13,7 +13,7 @@ To setup the chained explosion, you need to place the bombs onto the board by dr
 Here are the visual representation of bombs in the game:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Bombs.png?raw=true)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Bombs.png)
 
 
 From left to right: Cross bomb, Diagonal Bomb, Push Bomb
@@ -21,7 +21,7 @@ From left to right: Cross bomb, Diagonal Bomb, Push Bomb
 
 And here are the enemies within the game:
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Enemies.png?raw=true)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Enemies.png)
 
 
 From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)
@@ -30,7 +30,7 @@ From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies wit
 Also, some of the other special elements:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Special%20Elements.png?raw=true)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Special%20Elements.png)
 
 
 From left to right: Civilian, Explosive Keg, and Stack Explosive Keg
