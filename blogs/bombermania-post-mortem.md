@@ -80,4 +80,12 @@ And so, after being developed for ~1 month (and some additional time-consuming p
 
 We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebook in hope for better advertising - and consider the page to be a stepping stone for advertising future games. Yet, we ran into some troubles.
 
+
 ## The situation we're in
+
+### Advertising / Marketing
+
+After a week of advertising in Brazil, we found that the game is pretty appealing to user - with two creatives, based on the chain explosion / chain reaction mechanic, and big explosions. CPI within Brazil is approximately $0.15 - $0.2, sometimes drop as low as $0.13. So, first hand conclusion is - the game art style is pretty good, appealing to the player; the chain explosion mechanic seems to attract players as well (while the bigger explosion creative didn't perform as well). But, that wouldn't be enough to consider this game as a potential hit on this mobile game market.
+
+
+The game's first week performance result in Brazil was not good. Terrible - 
