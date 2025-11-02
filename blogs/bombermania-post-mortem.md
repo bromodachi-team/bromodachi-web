@@ -74,3 +74,10 @@ With the elements established above, we have the gameplay rules in specific:
   - **Destroy:** Destroy a specific target by choice.
  
 
+
+And so, after being developed for ~1 month (and some additional time-consuming problems that we need to deal with in the first time self-publishing game), the game is available on Google Play.
+
+
+We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebook in hope for better advertising - and consider the page to be a stepping stone for advertising future games. Yet, we ran into some troubles.
+
+## The situation we're in
