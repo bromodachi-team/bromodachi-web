@@ -98,3 +98,8 @@ The game's performance in the first few days was not good. Terrible, even - abou
 
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/drop_rate.png)
+
+
+*Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
+
+
