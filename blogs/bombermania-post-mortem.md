@@ -57,18 +57,19 @@ With the elements established above, we have the gameplay rules in specific:
 ### 1. The winning / losing condition:
 - The player must **eliminate all enemies within time limit** of each level,
 - Any civilian harmed **would not be tolerated,**
-- Player can try again endlessly within the time limit.
+- Player can try to trigger the explosion chain three times without any time limit.
 
 ### 2. Setting up bombs:
 - Player drag bombs onto tiles within the level,
 - The first placed bomb will start the chain of explosions - and will only be triggered after the player press the explode button.
-- Placed bomb can be returned anytime by dragging the bomb and drop to the return zone
+- Placed bomb can not be returned, nor re-arranged to another tiles.
 - Also, placed bomb can be re-arranged on to another tile within the level, as long as that tile is empty.
 - Player do not have to place all provided bomb onto the level to trigger the explosion. The remaining bombs will be converted to coins as reward after the player win the level
 
 ### 3. Boosters:
-- Player have 3 boosters, can be bought by coins, or gained by watching an advertisement
-- 3 boosters are:
+- Player have 4 different types of booster, can be bought by coins, or gained by watching an advertisement
+- The 4 types of boosters are:
+  - **Undo:** Return a placed bomb on the level. If the returned bomb is the first bomb to explode, then another bomb will be chosen to explode first randomly.
   - **Switch:** Change which bomb will explode first,
   - **Barrage:** Deals damage to random enemies, with the first damage dealt to a specific enemy,
   - **Destroy:** Destroy a specific target by choice.
@@ -85,7 +86,15 @@ We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebo
 
 ### Advertising / Marketing
 
-After a week of advertising in Brazil, we found that the game is pretty appealing to user - with two creatives, based on the chain explosion / chain reaction mechanic, and big explosions. CPI within Brazil is approximately $0.15 - $0.2, sometimes drop as low as $0.13. So, first hand conclusion is - the game art style is pretty good, appealing to the player; the chain explosion mechanic seems to attract players as well (while the bigger explosion creative didn't perform as well). But, that wouldn't be enough to consider this game as a potential hit on this mobile game market.
+After a week of advertising in Brazil, we found that the game is pretty appealing to user - with two creatives, based on the chain explosion / chain reaction mechanic, and big explosions. Cost per Install (CPI) within Brazil is approximately $0.15 - $0.2, sometimes drop as low as $0.13. So, first hand conclusion is - the game art style is pretty good, appealing to the player; the chain explosion mechanic seems to attract players as well (while the bigger explosion creative didn't perform as well). But, that wouldn't be enough to consider this game as a potential hit on the mobile game market.
 
 
-The game's first week performance result in Brazil was not good. Terrible - 
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/ResultsA.png)
+
+*Game advertising results within the first week of ad campaign in Brazil*
+
+
+The game's performance in the first few days was not good. Terrible, even - about 65% players in Brazil lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - 12.5% on 2nd day, and 16.5% on 3rd day. So, we figured - first time user experience (FTUE) is very bad, and seems to be incapable of introducing the main game mechanics to the player. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
+
+
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/drop_rate.png)
