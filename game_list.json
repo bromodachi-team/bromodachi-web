@@ -5,7 +5,8 @@
     "links": {
       "google_play": "https://play.google.com/store/apps/details?id=com.bromodachi.bombermania"
     },
-    "feature_image": "assets/bombermania_feature.png",
-    "icon_image": "assets/bombermania_icon.png"
+    "feature_image": "assets/game-list/bombermania_feature.png",
+    "icon_image": "assets/game-list/bombermania_icon.png"
   }
+
 ]
