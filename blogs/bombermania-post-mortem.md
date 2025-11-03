@@ -94,7 +94,7 @@ After a week of advertising in Brazil, we found that the game is pretty appealin
 *Game advertising results within the first week of ad campaign in Brazil*
 
 
-The game's performance in the first few days was not good. Terrible, even - about 65% players in Brazil lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - 12.5% on 2nd day, and 16.5% on 3rd day. So, we figured - first time user experience (FTUE) is very bad, and seems to be incapable of introducing the main game mechanics to the player. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
+The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
 
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/drop_rate.png)
@@ -103,3 +103,4 @@ The game's performance in the first few days was not good. Terrible, even - abou
 *Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
 
 
+But the sad fact is, 
