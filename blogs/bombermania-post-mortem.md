@@ -1,6 +1,6 @@
 Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - the game designer of the team. Today, we’ll discuss the game itself - what are the goods, the bad, and the ugly, about this game.
 
-<h1>About the game</h1>
+## About the game
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/Gameplay.png)
 
@@ -104,4 +104,15 @@ The game's performance in the first few days was not good. Terrible, even - abou
 
 
 But sadly, the game's performance did not go up; after a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level. At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some of the update in order to improve FTUE and RRD1:
-- 
+
+
+First, we switched from three tries per levels into a time-limited gameplay (since, some players did commented that the three tries per levels needed to be explain explicitly - the current UI and rules made them misunderstood that they can freely planting bombs then trigger the explosion). The game now only requires player to eliminate all enemies on board, without reaching timelimit, nor killing any civilian.
+
+
+Second - based on live users testing result, we determined that the game's design has violated a rule in UX design - a lack of "Undo" action for players, which is a major flaw. Why, you may ask - since there's an Undo booster; but, because it is a booster, so this function is locked behind game currency (or an ad) - meanwhile, the player still makes mistakes left and right and frustrated to no ends since there's no way to revert their mistake. So, 2 more things are implemented: Players can re-arrange bombs on the boards - bombs can be placed to another tile, as long as that tile is empty; also, player can drag planted bomb on the board back into the bomb section on screen to return it to its original stock. 
+
+
+Third - we implemented a step-by-step onboarding process for level 1 - since the game's suggestion in the previous two version clearly did not work, and also made changes to the bombs' display and visual cue: red bombs will explode, black bombs don't; each bomb that would explode will display its explosion range to indicate which other elements will be affected by the explosions.
+
+
+Fourth - we remove the interstial ads and banner ads, in a (slightly) desperate attempt to improve FTUE, and made a few minor UI changes in according to the above game updates.
