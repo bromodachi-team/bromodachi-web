@@ -94,7 +94,7 @@ After a week of advertising in Brazil, we found that the game is pretty appealin
 *Game advertising results within the first week of ad campaign in Brazil*
 
 
-The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
+The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
 
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate.png)
@@ -103,4 +103,5 @@ The game's performance in the first few days was not good. Terrible, even - abou
 *Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
 
 
-But the sad fact is, 
+But sadly, the game's performance did not go up; after a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level. At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some of the update in order to improve FTUE and RRD1:
+- 
