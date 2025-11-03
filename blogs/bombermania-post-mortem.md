@@ -2,7 +2,7 @@ Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - t
 
 <h1>About the game</h1>
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Gameplay.png)
+![alt text](assets/blogs/post-mortem/bombermania/Gameplay.png)
 
 Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.
 
@@ -13,7 +13,7 @@ To setup the chained explosion, you need to place the bombs onto the board by dr
 Here are the visual representation of bombs in the game:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Bombs.png)
+![alt text](assets/blogs/post-mortem/bombermania/assets/Bombs.png)
 
 
 *From left to right: Cross bomb, Diagonal Bomb, Push Bomb*
@@ -21,7 +21,7 @@ Here are the visual representation of bombs in the game:
 
 And here are the enemies within the game:
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Enemies.png)
+![alt text](assets/blogs/post-mortem/bombermania/Enemies.png)
 
 
 *From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*
@@ -30,7 +30,7 @@ And here are the enemies within the game:
 Also, some of the other special elements:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/Special%20Elements.png)
+![alt text](assets/blogs/post-mortem/bombermania/Special%20Elements.png)
 
 
 *From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*
@@ -89,7 +89,7 @@ We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebo
 After a week of advertising in Brazil, we found that the game is pretty appealing to user - with two creatives, based on the chain explosion / chain reaction mechanic, and big explosions. Cost per Install (CPI) within Brazil is approximately $0.15 - $0.2, sometimes drop as low as $0.13. So, first hand conclusion is - the game art style is pretty good, appealing to the player; the chain explosion mechanic seems to attract players as well (while the bigger explosion creative didn't perform as well). But, that wouldn't be enough to consider this game as a potential hit on the mobile game market.
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/ResultsA.png)
+![alt text](assets/blogs/post-mortem/bombermania/ResultsA.png)
 
 *Game advertising results within the first week of ad campaign in Brazil*
 
@@ -97,7 +97,7 @@ After a week of advertising in Brazil, we found that the game is pretty appealin
 The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/drop_rate.png)
+![alt text](assets/blogs/post-mortem/bombermania/drop_rate.png)
 
 
 *Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
