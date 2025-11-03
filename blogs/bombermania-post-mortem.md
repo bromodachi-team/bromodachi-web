@@ -94,6 +94,8 @@ After a week of advertising in Brazil, we found that the game is pretty appealin
 *Game advertising results within the first week of ad campaign in Brazil*
 
 
+### Performance, and first update
+
 The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
 
 
@@ -103,7 +105,10 @@ The game's performance in the first few days was not good. Terrible, even - abou
 *Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
 
 
-But sadly, the game's performance did not go up; after a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level. At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some of the update in order to improve FTUE and RRD1:
+But sadly, the game's performance did not go up. After a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level.At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some changes within the core gameplay in order to improve FTUE and RRD1.
+
+
+### Second update:
 
 
 First, we switched from three tries per levels into a time-limited gameplay (since, some players did commented that the three tries per levels needed to be explain explicitly - the current UI and rules made them misunderstood that they can freely planting bombs then trigger the explosion). The game now only requires player to eliminate all enemies on board, without reaching timelimit, nor killing any civilian.
