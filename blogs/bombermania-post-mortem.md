@@ -4,7 +4,7 @@ Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - t
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/gameplay.png)
 
-Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.<br>
+Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.<br><br>
 To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.<br><br><br>
 
 Here are the visual representation of bombs in the game:<br><br>
@@ -16,42 +16,30 @@ And here are the enemies within the game:<br><br>
 Also, some of the other special elements:<br><br>
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/special_elements.png)<br>
 *From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*<br><br><br>
-The way these elements work are actually pretty simple:
-<br>
-- **Bombs:** They explode in 2 patterns: Cross ("+"), or diagonal (X); with the exception of Push bomb - as with its name, the bomb push anything within its explosive range away.
-<br>
-- **Enemies:** The main targets to eliminate within each level. They all have at least 1 HP; armored enemies will either have 2 or 3 HP, based on their armor. Meanwhile, enemies carrying bomb will explode upon interaction (being pushed at by something, or affected by any explosion from bombs / kegs / other enemy carrying bomb).
-<br>
-- **Kegs:** Simply put, explosive barrel; one explode in the radius of 1-tile from itself; the other will have larger blast radius upon being interacted by something else (pushed at, or explosion).
-<br>
-- **Civilian:** Just don't harm them, and you're fine.
-<br>
-<br>
-With the elements established above, we have the gameplay rules in specific:
-
+The way these elements work are actually pretty simple:<br><br>
+- **Bombs:** They explode in 2 patterns: Cross ("+"), or diagonal (X); with the exception of Push bomb - as with its name, the bomb push anything within its explosive range away.<br>
+- **Enemies:** The main targets to eliminate within each level. They all have at least 1 HP; armored enemies will either have 2 or 3 HP, based on their armor. Meanwhile, enemies carrying bomb will explode upon interaction (being pushed at by something, or affected by any explosion from bombs / kegs / other enemy carrying bomb).<br>
+- **Kegs:** Simply put, explosive barrel; one explode in the radius of 1-tile from itself; the other will have larger blast radius upon being interacted by something else (pushed at, or explosion).<br>
+- **Civilian:** Just don't harm them, and you're fine.<br><br><br>
+With the elements established above, we have the gameplay rules in specific:<br>
 ### 1. The winning / losing condition:
 - The player must **eliminate all enemies within time limit** of each level,
 - Any civilian harmed **would not be tolerated,**
 - Player can try to trigger the explosion chain three times without any time limit.
-
 ### 2. Setting up bombs:
 - Player drag bombs onto tiles within the level,
 - The first placed bomb will start the chain of explosions - and will only be triggered after the player press the explode button.
 - Placed bomb can not be returned, nor re-arranged to another tiles.
 - Also, placed bomb can be re-arranged on to another tile within the level, as long as that tile is empty.
 - Player do not have to place all provided bomb onto the level to trigger the explosion. The remaining bombs will be converted to coins as reward after the player win the level
-
 ### 3. Boosters:
 - Player have 4 different types of booster, can be bought by coins, or gained by watching an advertisement
 - The 4 types of boosters are:
   - **Undo:** Return a placed bomb on the level. If the returned bomb is the first bomb to explode, then another bomb will be chosen to explode first randomly.
   - **Switch:** Change which bomb will explode first,
   - **Barrage:** Deals damage to random enemies, with the first damage dealt to a specific enemy,
-  - **Destroy:** Destroy a specific target by choice.
-<br>
-<br>
-And so, after being developed for ~1 month (and some additional time-consuming problems that we need to deal with in the first time self-publishing game), the game is available on Google Play.
-<br>
+  - **Destroy:** Destroy a specific target by choice.<br><br><br>
+And so, after being developed for ~1 month (and some additional time-consuming problems that we need to deal with in the first time self-publishing game), the game is available on Google Play.<br><br>
 We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebook in hope for better advertising - and consider the page to be a stepping stone for advertising future games. Yet, we ran into some troubles.
 <br>
 
