@@ -53,7 +53,7 @@ Also, some of the other special elements:<br><br>
 - The 4 types of boosters are:
   - <b>Undo:</b> Return a placed bomb on the level. If the returned bomb is the first bomb to explode, then another bomb will be chosen to explode first randomly.
   - <b>Switch:</b> Change which bomb will explode first,
-  - <b>Barrage<:/b> Deals damage to random enemies, with the first damage dealt to a specific enemy,
+  - <b>Barrage:</b> Deals damage to random enemies, with the first damage dealt to a specific enemy,
   - <b>Destroy:</b> Destroy a specific target by choice.<br><br>
 
 <p>And so, after being developed for ~1 month (and some additional time-consuming problems that we need to deal with in the first time self-publishing game), the game is available on Google Play.</p>
