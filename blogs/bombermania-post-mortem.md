@@ -5,28 +5,20 @@ Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - t
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/gameplay.png)
 
 Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.<br>
-To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.<br><br>
-Here are the visual representation of bombs in the game:
-<br>
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/bombs.png)
-<br>
-*From left to right: Cross bomb, Diagonal Bomb, Push Bomb*
-<br>
-<br>
-And here are the enemies within the game:
-<br>
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/enemies.png)
-<br>
-*From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*
-<br>
-<br>
+To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.<br /><br />
+Here are the visual representation of bombs in the game:<br />
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/bombs.png)<br />
+*From left to right: Cross bomb, Diagonal Bomb, Push Bomb*<br /><br />
+And here are the enemies within the game:<br />
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/enemies.png)<br />
+*From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*<br /><br />
 Also, some of the other special elements:
-<br>
+<br />
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/special_elements.png)
-<br>
+<br />
 *From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*
-<br>
-<br>
+<br />
+<br />
 The way these elements work are actually pretty simple:
 <br>
 - **Bombs:** They explode in 2 patterns: Cross ("+"), or diagonal (X); with the exception of Push bomb - as with its name, the bomb push anything within its explosive range away.
