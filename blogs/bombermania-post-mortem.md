@@ -10,6 +10,8 @@ Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemi
 To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.
 
 
+
+
 Here are the visual representation of bombs in the game:
 
 
@@ -17,6 +19,8 @@ Here are the visual representation of bombs in the game:
 
 
 *From left to right: Cross bomb, Diagonal Bomb, Push Bomb*
+
+
 
 
 And here are the enemies within the game:
@@ -27,6 +31,8 @@ And here are the enemies within the game:
 *From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*
 
 
+
+
 Also, some of the other special elements:
 
 
@@ -34,6 +40,7 @@ Also, some of the other special elements:
 
 
 *From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*
+
 
 
 
