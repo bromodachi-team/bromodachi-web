@@ -1,8 +1,8 @@
-Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - the game designer of the team. Today, we’ll discuss the game itself - what are the goods, the bad, and the ugly, about this game.
+Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - the game designer of the team. In this post, we’ll discuss the game itself - what are the goods - the bads - and the uglies - about this game.
 
 ## About the game
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/Gameplay.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/gameplay.png)
 
 Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.
 
@@ -13,7 +13,7 @@ To setup the chained explosion, you need to place the bombs onto the board by dr
 Here are the visual representation of bombs in the game:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/Bombs.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/bombs.png)
 
 
 *From left to right: Cross bomb, Diagonal Bomb, Push Bomb*
@@ -21,7 +21,7 @@ Here are the visual representation of bombs in the game:
 
 And here are the enemies within the game:
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/Enemies.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/enemies.png)
 
 
 *From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*
@@ -30,7 +30,7 @@ And here are the enemies within the game:
 Also, some of the other special elements:
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/Special%20Elements.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/special_elements.png)
 
 
 *From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*
@@ -89,20 +89,25 @@ We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebo
 After a week of advertising in Brazil, we found that the game is pretty appealing to user - with two creatives, based on the chain explosion / chain reaction mechanic, and big explosions. Cost per Install (CPI) within Brazil is approximately $0.15 - $0.2, sometimes drop as low as $0.13. So, first hand conclusion is - the game art style is pretty good, appealing to the player; the chain explosion mechanic seems to attract players as well (while the bigger explosion creative didn't perform as well). But, that wouldn't be enough to consider this game as a potential hit on the mobile game market.
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/ResultsA.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/ad_campaign_1_0_2.png)
 
 *Game advertising results within the first week of ad campaign in Brazil*
 
 
 ### Performance, and first update
 
+
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate_1_0_2.png)
+
+*Performance of the first version - 1.0.2 - drop rates, by level 1 (level 0) to level 11 (level 10) - as you can see, we lost 45% players right in the 1st level (level 0)*
+
+
 The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.
 
 
-![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate.png)
+![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate_1_0_3.png)
 
-
-*Drop rate of 10 first levels - as you can see, we lost 45% players right in the 1st level (level 0)*
+*2nd version - 1.0.3 - not much better*
 
 
 But sadly, the game's performance did not go up. After a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level.At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some changes within the core gameplay in order to improve FTUE and RRD1.
@@ -121,3 +126,5 @@ Third - we implemented a step-by-step onboarding process for level 1 - since the
 
 
 Fourth - we remove the interstial ads and banner ads, in a (slightly) desperate attempt to improve FTUE, and made a few minor UI changes in according to the above game updates.
+
+
