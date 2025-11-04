@@ -1,4 +1,4 @@
-<p>Hello - we’re Bromodachi; the developers behind Bombermania; and I’m Dat - the game designer of the team. In this post, we’ll discuss the game itself - what are the goods - the bads - and the uglies - about this game.</p>
+<p>Hello - we’re <b>Bromodachi</b>; the developers behind Bombermania; and I’m Dat - the game designer of the team. In this post, we’ll discuss the game itself - what are the goods - the bads - and the uglies - about this game.</p>
 
 ## About the game
 
@@ -28,19 +28,19 @@ Also, some of the other special elements:<br><br>
 
 <p>The way these elements work are actually pretty simple:</p>
 
-- **Bombs:** They explode in 2 patterns: Cross ("+"), or diagonal (X); with the exception of Push bomb - as with its name, the bomb push anything within its explosive range away.<br>
+- <b>Bombs:</b> They explode in 2 patterns: Cross ("+"), or diagonal (X); with the exception of Push bomb - as with its name, the bomb push anything within its explosive range away.<br>
 
-- **Enemies:** The main targets to eliminate within each level. They all have at least 1 HP; armored enemies will either have 2 or 3 HP, based on their armor. Meanwhile, enemies carrying bomb will explode upon interaction (being pushed at by something, or affected by any explosion from bombs / kegs / other enemy carrying bomb).<br>
+- <b>Enemies:</b> The main targets to eliminate within each level. They all have at least 1 HP; armored enemies will either have 2 or 3 HP, based on their armor. Meanwhile, enemies carrying bomb will explode upon interaction (being pushed at by something, or affected by any explosion from bombs / kegs / other enemy carrying bomb).<br>
 
-- **Kegs:** Simply put, explosive barrel; one explode in the radius of 1-tile from itself; the other will have larger blast radius upon being interacted by something else (pushed at, or explosion).<br>
+- <b>Kegs:</b> Simply put, explosive barrel; one explode in the radius of 1-tile from itself; the other will have larger blast radius upon being interacted by something else (pushed at, or explosion).<br>
 
-- **Civilian:** Just don't harm them, and you're fine.<br>
+- <b>Civilian:</b> Just don't harm them, and you're fine.<br>
 
 <p>With the elements established above, we have the gameplay rules in specific:</p>
   
 ### 1. The winning / losing condition:
-- The player must **eliminate all enemies within time limit** of each level,
-- Any civilian harmed **would not be tolerated,**
+- The player must <b>eliminate all enemies within time limit</b> of each level,
+- Any civilian harmed <b>would not be tolerated,</b>
 - Player can try to trigger the explosion chain three times without any time limit.
 ### 2. Setting up bombs:
 - Player drag bombs onto tiles within the level,
@@ -51,10 +51,10 @@ Also, some of the other special elements:<br><br>
 ### 3. Boosters:
 - Player have 4 different types of booster, can be bought by coins, or gained by watching an advertisement
 - The 4 types of boosters are:
-  - **Undo:** Return a placed bomb on the level. If the returned bomb is the first bomb to explode, then another bomb will be chosen to explode first randomly.
-  - **Switch:** Change which bomb will explode first,
-  - **Barrage:** Deals damage to random enemies, with the first damage dealt to a specific enemy,
-  - **Destroy:** Destroy a specific target by choice.<br><br>
+  - <b>Undo:</b> Return a placed bomb on the level. If the returned bomb is the first bomb to explode, then another bomb will be chosen to explode first randomly.
+  - <b>Switch:</b> Change which bomb will explode first,
+  - <b>Barrage<:/b> Deals damage to random enemies, with the first damage dealt to a specific enemy,
+  - <b>Destroy:</b> Destroy a specific target by choice.<br><br>
 
 <p>And so, after being developed for ~1 month (and some additional time-consuming problems that we need to deal with in the first time self-publishing game), the game is available on Google Play.</p>
 
@@ -76,7 +76,7 @@ Also, some of the other special elements:<br><br>
 
 <em>Performance of the first version - 1.0.2 - drop rates, by level 1 (level 0) to level 11 (level 10) - as you can see, we lost 45% players right in the 1st level (level 0)</em><br>
 
-<p>The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.</p>
+<p>The game's performance in the first few days was not good. Terrible, even - about <b>65% players in Brazil</b> lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - <b>12.5% on 2nd day, and 16.5% on 3rd day</b>; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - we have a terrible <b>first time user experience (FTUE)</b>, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.</p>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/ad_campaign_1_0_3.png)<br>
 
@@ -86,7 +86,7 @@ Also, some of the other special elements:<br><br>
 
 <em>The level's drop rate and onboarding (the FTUE) are not much better though</em><br><br>
 
-<p>But sadly, the game's performance did not go up. After a few days of advertisement, **RRD1 even plummmeted down to 8.5%**, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level.At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some changes within the core gameplay in order to improve FTUE and RRD1.</p>
+<p>But sadly, the game's performance did not go up. After a few days of advertisement, <b>RRD1 even plummmeted down to 8.5%</b>, with indifferences in engagement time (less than 4 minutes, on average). Meanwhile, even though we experienced a slight drop of drop rate from the first level (level 0), the game still loses ~50% of players right after the 2nd level.At this point, a major and immediate update is critically needed - the game's performance show us that the player still don't understand how to actually play the game and how its mechanics work; with some live user feedback also prove some parts of the UI are confusing or misleading. Therefore, we enrolled some changes within the core gameplay in order to improve FTUE and RRD1.</p>
 
 ### Second update:
 
@@ -124,6 +124,8 @@ Also, some of the other special elements:<br><br>
 
 ### b. Too complicated
 <p>Most of the successful puzzle / casual games on the market at the momemnt (of November 2025) have very simple control mechanics, with immediate feedbacks to the player during play. Players can understand right away what to do, what are the boundaries, and quickly drawn in the with the fun of the game. Meanwhile, we did not follow their footsteps, and perhaps, paid the price: You have to drag bombs onto the level without knowing how it works, and then press a button to try things out - too many step, too confusing (without explainations), too complicated. Most of the times the player don't know what they're looking at or what they're doing; got frustrated to no ends when things don't work the way they thought it would be - and obviously, quit to find a better experience.</p>
+
+### c. Confusing name
 
 ## Lesson learned, simply put:
 - <b>Keep it simple</b>: Simple game control, easy to understand rule;
