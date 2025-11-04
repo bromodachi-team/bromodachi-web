@@ -6,25 +6,25 @@
 
 <p>Bombermania is a mobile puzzle game, with a simple goal - to eliminate all enemies on the board. And the tools to achieve that goal are bombs - which would explode in sequence, based on the first placed bomb that would start the chained explosion.</p>
 
-<p>To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.</p><br>
+<p>To setup the chained explosion, you need to place the bombs onto the board by dragging, and manually press an explode button to set-off the explosion of the first bomb. If there’s any other bomb within the explosion range of the first bomb – that bomb would explode too, and will affect other bombs / enemies within its explosion range - and we have ourselves an explosion chain.</p>
 
-<p>Here are the visual representation of bombs in the game:</p><br>
+<p>Here are the visual representation of bombs in the game:</p>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/bombs.png)<br>
 
-<em>From left to right: Cross bomb, Diagonal Bomb, Push Bomb</em><br><br><br>
+<em>From left to right: Cross bomb, Diagonal Bomb, Push Bomb</em><br><br>
 
 And here are the enemies within the game:<br><br>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/enemies.png)<br>
 
-*From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*<br><br><br>
+*From left to right: Normal enemy, Armored enemy (1 HP and 2 HP), and enemies with bomb (cross bomb, or diagonal bomb)*<br><br>
 
 Also, some of the other special elements:<br><br>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/special_elements.png)<br>
 
-*From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*<br><br><br>
+*From left to right: Civilian, Explosive Keg, and Stack Explosive Keg*<br><br>
 
 <p>The way these elements work are actually pretty simple:</p>
 
@@ -68,15 +68,15 @@ Also, some of the other special elements:<br><br>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/ad_campaign_1_0_2.png)<br>
 
-*Game advertising results within the first week of ad campaign in Brazil*<br><br>
+*Game advertising results within the first week of ad campaign in Brazil*<br>
 
 ### Performance, and first update
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate_1_0_2.png)<br>
 
-*Performance of the first version - 1.0.2 - drop rates, by level 1 (level 0) to level 11 (level 10) - as you can see, we lost 45% players right in the 1st level (level 0)*<br><br>
+*Performance of the first version - 1.0.2 - drop rates, by level 1 (level 0) to level 11 (level 10) - as you can see, we lost 45% players right in the 1st level (level 0)*<br>
 
-<p>The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.</p><br>
+<p>The game's performance in the first few days was not good. Terrible, even - about **65% players in Brazil** lose at least 1 level, while they're not even passed level 10. Day 1 retention (RRD1) is very low - **12.5% on 2nd day, and 16.5% on 3rd day**; moreover, we lost about ~50% of players just after level 2 - which is a critical pain point. So, we figured - **first time user experience** (FTUE) is very bad, and the game seems to be - either incapable of introducing the main game mechanics to the player, or just too difficult for players to understand and interpret the game mechanics by themselves. From that conclusion, we made a quick patch to make the 5 first levels with the hope of improving FTUE.</p>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/drop_rate_1_0_3.png)<br>
 
