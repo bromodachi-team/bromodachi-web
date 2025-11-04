@@ -108,7 +108,7 @@ Also, some of the other special elements:<br><br>
 
 <em>Ad campaign also perform slightly worse</em><br>
 
-<p>Insignificant. RRD1 even dropped to ~6% in the first two days; bounced to 12% in the third day, but that means after two versions of updates, we're back to square one. CPI risen to $0.19 - $0.22, while drop rates for each level almost did not even budge; we're still losing ~50% of players at level 2. Many of the live testing players are still confused about how to play the game or how the mechanics work. Some find it hard to even recognize the bomb types they dragged onto the level (and how do they even work). The conclusion is simple: these update are not enough to fix a game that have major problems within its core.</p>
+<p>Insignificant. <b>RRD1 even dropped to ~6%</b>b> in the first two days; bounced to 12% in the third day, but that means after two versions of updates, we're back to square one. <b>CPI risen to $0.19 - $0.22</b>b>, while drop rates for each level almost did not even budge; we're still losing ~50% of players at level 2. Many of the live testing players are still confused about how to play the game or how the mechanics work. Some find it hard to even recognize the bomb types they dragged onto the level (and how do they even work). The conclusion is simple: these update are not enough to fix a game that have major problems within its core.</p>
 <p>So, we had to make a painful decision: cut the marketing budget of the game, and leave it be.</p>
 
 ## What we did right?
@@ -126,9 +126,9 @@ Also, some of the other special elements:<br><br>
 <p>Most of the successful puzzle / casual games on the market at the momemnt (of November 2025) have very simple control mechanics, with immediate feedbacks to the player during play. Players can understand right away what to do, what are the boundaries, and quickly drawn in the with the fun of the game. Meanwhile, we did not follow their footsteps, and perhaps, paid the price: You have to drag bombs onto the level without knowing how it works, and then press a button to try things out - too many step, too confusing (without explainations), too complicated. Most of the times the player don't know what they're looking at or what they're doing; got frustrated to no ends when things don't work the way they thought it would be - and obviously, quit to find a better experience.</p>
 
 ## Lesson learned, simply put:
-- Keep it simple: Simple game control, easy to understand rule;
-- Immediate feedback: Each drag / tap should also have a feedback - did they do something right or wrong? If wrong, why?
-- Easy and quick rewards in onboarding process: The first 20 levels should be played through fast, easy, smoothly, and capable of teaching the players the basics. If they're not, nothing else matters.
+- <b>Keep it simple</b>: Simple game control, easy to understand rule;
+- <b>Immediate feedback</b>: Each drag / tap should also have a feedback - did they do something right or wrong? If wrong, why?
+- <b>Easy and quick rewards in onboarding process</b>: The first 20 levels should be played through fast, easy, smoothly, and capable of teaching the players the basics. If they're not, nothing else matters.
 
 ## So, what now?
-<p>This post-mortem of a potential mobile game hit is a lesson that we learned painfully and learned by heart - we're implementing this lesson into other projects at the moment. As for Bombermania, this probably is farewell - maybe one day, when we've became a team of more well-developed members with bigger budget, we'll revisit and perhaps perform a development-ritual-of-sort to revive this dear game of our from the dead. But for now, goodbye, Bombermania. And thank you, dear readers, for reading upto this point - hopefully, we'll see you in another post about analyzing how a game of ours became a major hit, and not a post-mortem.</p>
+<p>This post-mortem of a potential mobile game hit is a lesson that we learned painfully and learned by heart - we're implementing this lesson into other projects at the moment. As for Bombermania, this probably is farewell - maybe one day, when we've became a team of more well-developed members with bigger budget, we'll revisit and perhaps perform a development-ritual-of-sort to revive this dear game of our from the dead. But for now, goodbye, Bombermania. And thank you, dear readers, for reading upto this point - hopefully, we'll see you in another post about analyzing how a game of ours became a major hit, and not another post-mortem.</p>
