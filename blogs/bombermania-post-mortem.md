@@ -12,7 +12,7 @@
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/bombs.png)<br>
 
-*From left to right: Cross bomb, Diagonal Bomb, Push Bomb*<br><br><br>
+<em>From left to right: Cross bomb, Diagonal Bomb, Push Bomb</em><br><br><br>
 
 And here are the enemies within the game:<br><br>
 
