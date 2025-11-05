@@ -1,4 +1,4 @@
-<p style='text-align: justify;'>Hello - we’re <b>Bromodachi</b>; the developers behind Bombermania; and I’m Dat - the game designer of the team. In this post, we’ll discuss the game itself - what are the goods - the bads - and the uglies - about this game.</p>
+<style>Hello - we’re <b>Bromodachi</b>; the developers behind Bombermania; and I’m Dat - the game designer of the team. In this post, we’ll discuss the game itself - what are the goods - the bads - and the uglies - about this game. {text-align: right}</style>
 
 ## About the game
 
