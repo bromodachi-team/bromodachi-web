@@ -24,7 +24,7 @@
   From left to right: Cross bomb, Diagonal Bomb, Push Bomb
 </em><br><br>
 
-And here are the enemies within the game:<br><br>
+And here are the enemies within the game:<br>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/enemies.png)<br>
 
@@ -34,7 +34,7 @@ And here are the enemies within the game:<br><br>
 
 <p align="justify">
   Also, some of the other special elements:
-</p><br><br>
+</p><br>
 
 ![alt text](https://github.com/bromodachi-team/bromodachi-web/blob/master/assets/blogs/post-mortem/bombermania/special_elements.png)<br>
 
