@@ -137,7 +137,7 @@ And here are the enemies within the game:<br>
 
 <em>Ad campaign also perform slightly worse</em><br>
 
-<p align="justify">Insignificant. <b>RRD1 even dropped to ~6%</b>b> in the first two days; bounced to 12% in the third day, but that means after two versions of updates, we're back to square one. <b>CPI risen to $0.19 - $0.22</b>b>, while drop rates for each level almost did not even budge; we're still losing ~50% of players at level 2. Many of the live testing players are still confused about how to play the game or how the mechanics work. Some find it hard to even recognize the bomb types they dragged onto the level (and how do they even work). The conclusion is simple: these update are not enough to fix a game that have major problems within its core.</p>
+<p align="justify">The improvements in performance are almost insignificant. <b>RRD1 even dropped to ~6%</b>b> in the first two days; bounced to 12% in the third day, but that means after two versions of updates, we're back to square one. <b>CPI risen to $0.19 - $0.22</b>b>, while drop rates for each level almost did not even budge; we're still losing ~50% of players at level 2. Many of the live testing players are still confused about how to play the game or how the mechanics work. Some find it hard to even recognize the bomb types they dragged onto the level (and how do they even work). The conclusion is simple: these update are not enough to fix a game that have major problems within its core.</p>
 <p align="justify">So, we had to make a painful decision: cut the marketing budget of the game, and leave it be.</p>
 
 <h2>What we did right?</h2>
