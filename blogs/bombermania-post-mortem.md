@@ -89,6 +89,10 @@ And here are the enemies within the game:<br>
 
 <p align="justify">We connected to Meta Ads, ran ad campaign in Brazil, and create a page on Facebook in hope for better advertising - and consider the page to be a stepping stone for advertising future games. Yet, we ran into some troubles.</p><br>
 
+<h2>Development team and budget</h2>
+
+<p align="justify">At the time of development, we have 4 members - a Game Designer, me; a 2D artist for all UI and 2d assets in game, another 2D artist for the animations in game; 2 developers for all UI and game logic / monetization logic / etc... Since this project is to be considered as a side project for most of us, only some of our team members took about $150 monthly, and other budgets are spent on marketing fees per day, which is $40 per day.</p>
+
 <h2>The situation we're in</h2>
 
 <h3>Advertising / Marketing</h3>
