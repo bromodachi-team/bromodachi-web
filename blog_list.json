@@ -1,9 +1,9 @@
 [
   {
-    "title": "Test",
-    "file": "test.md",
-    "short_desc": "Test description",
-    "date": "2025-11-01"
+    "title": "Bromodachi Tracking",
+    "file": "dev-tracking.md",
+    "short_desc": "Take a look at how we handle tracking",
+    "date": "2025-11-10"
   },
   {
      "title": "Requiem for the Bombs",
@@ -12,4 +12,5 @@
     "date": "2025-10-31"
   }
 ]
+
 
