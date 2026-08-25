@@ -131,7 +131,7 @@ header {
 .store-links a:hover { background: rgba(0,188,212,0.3); }
 
 /* === BLOG SECTION === */
-.blog-list, .info-section, .blog-post {
+.blog-list, .info-section, .blog-post, member-section {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
