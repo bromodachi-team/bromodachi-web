@@ -14,6 +14,43 @@
     <p>We’re a small indie team experimenting with mechanics and player experience.</p>
   </header>
 
+   <main id="member-container" class="card-grid"></main>
+
+  <script>
+    async function loadMembers() {
+      const container = document.getElementById("member-container");
+
+      try {
+        const res = await fetch(`member_list.json?ts=${Date.now()}`);
+        if (!res.ok) throw new Error("Cannot fetch member_list.json");
+        const members = await res.json();
+
+        members.forEach(member => {
+          const card = document.createElement("div");
+          card.className = "card game-card";
+
+          card.innerHTML = `
+            <img src="${member.avatar}" alt="${member.name}" class="game-feature" />
+            <div class="card-content">
+              <h3>${member.name}</h3>
+              <p>${member.role}</p>
+              <div class="store-links"><a href="${member.resume}" target="_blank">Resume</a></div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById("member-container").innerHTML = `
+          <p style="color:red;">⚠️ Failed to load member_list.json</p>
+        `;
+      }
+    }
+
+    loadMembers();
+  </script>
+
   <section class="info-section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:kultie1271996@gmail.com">kultie1271996@gmail.com</a></p>
